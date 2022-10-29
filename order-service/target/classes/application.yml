@@ -10,13 +10,13 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: localhost:81
       discovery:
         # 集群名称 CD代指成都
-        cluster-name: CD
-        namespace: 8d640f60-91a6-4bc7-8873-44a8a95a6e58
-        # 配置实例为非临时
-        ephemeral: false
+#        cluster-name: CD
+#        namespace: 8d640f60-91a6-4bc7-8873-44a8a95a6e58
+        # 配置实例为临时true/非临时false
+        ephemeral: true
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
