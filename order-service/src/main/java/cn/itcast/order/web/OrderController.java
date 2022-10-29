@@ -28,7 +28,7 @@ public class OrderController {
 
         // 2. 根据order中的userId远程调用user服务进行查询
         // 2.1 拼凑url
-        String url = "http://localhost:8081/user/" + order.getUserId();
+        String url = "http://userservice/user/" + order.getUserId();
         // 2.2 使用RestTemplate发送Get请求
         User user = restTemplate.getForObject(url, User.class);
         // 3. 封装数据
