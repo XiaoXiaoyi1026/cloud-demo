@@ -44,3 +44,10 @@ ribbon:
     enabled: true
     # 指定对哪个服务
     clients: userservice
+#feign:
+#  client:
+#    config:
+#      # 可指定服务名称，default代表全局生效
+#      default:
+#        # feign日志输出级别设置 FULL代表全部日志信息
+#        loggerLevel: FULL

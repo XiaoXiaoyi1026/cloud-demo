@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @author xiaoxiaoyi
+ */
 @Service
 public class OrderService {
 
@@ -31,7 +34,7 @@ public class OrderService {
         // 3. 封装数据
 //        order.setUser(user);
 
-        // 2. 使用Feign远程调用
+        // 2. 使用Feign远程调用，代替RestTemplate
         User user = userClient.findById(order.getUserId());
         // 3. 封装数据
         order.setUser(user);
