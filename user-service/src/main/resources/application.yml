@@ -1,18 +1,18 @@
 server:
   port: 8081
 spring:
-#  application:
-#    #    服务名称
-#    name: userservice
+  application:
+    #    服务名称
+    name: userservice
   datasource:
     url: jdbc:mysql://localhost:3306/day01_springcloud01?useSSL=false
     username: root
     password: 1026
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
-#      # nacos服务器地址
-#      server-addr: localhost:8848
+      # nacos服务器地址
+#      server-addr: localhost:81
 #      discovery:
 #        # 集群名称 CD代指成都 SH代指上海
 #        cluster-name: SH

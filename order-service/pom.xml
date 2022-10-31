@@ -7,11 +7,30 @@
         <groupId>cn.itcast.demo</groupId>
         <version>1.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>order-service</artifactId>
 
     <dependencies>
+        <!-- 引入负载均衡 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-loadbalancer</artifactId>
+        </dependency>
+
+        <!-- 引用feign-api -->
+        <dependency>
+            <groupId>xyx.xiaoxiaoyi</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Apache HttpClient的依赖 Feign默认使用URLConnection, 不支持连接池，性能较差, 还有OKHttp, 也支持连接池 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
 
         <!-- feign客户端依赖 -->
         <dependency>
@@ -20,13 +39,13 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!--mybatis-->

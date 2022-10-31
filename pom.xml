@@ -7,10 +7,12 @@
     <groupId>cn.itcast.demo</groupId>
     <artifactId>cloud-demo</artifactId>
     <version>1.0</version>
+
     <modules>
         <module>user-service</module>
         <module>order-service</module>
         <module>eureka-server</module>
+        <module>feign-api</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -18,21 +20,23 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.9.RELEASE</version>
-        <relativePath/>
+        <version>2.6.11</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
-        <mysql.version>5.1.47</mysql.version>
-        <mybatis.version>2.1.1</mybatis.version>
+        <java.version>17</java.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <mysql.version>8.0.31</mysql.version>
+        <mybatis.version>2.2.2</mybatis.version>
+        <alibaba.version>2021.1</alibaba.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
             <!-- springCloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -46,7 +50,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.2.6.RELEASE</version>
+                <version>${alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -57,6 +61,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+
             <!--mybatis-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -70,6 +75,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
+        </dependency>
+
+        <!-- 让Spring启动时读取bootstrap文件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
 </project>

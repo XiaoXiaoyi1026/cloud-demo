@@ -1,7 +1,12 @@
 package cn.itcast.order.pojo;
 
 import lombok.Data;
+import xyx.xiaoxiaoyi.feignapi.pojo.User;
 
+/**
+ * @author xiaoxiaoyi
+ * 订单数据
+ */
 @Data
 public class Order {
     private Long id;

@@ -1,10 +1,10 @@
-package cn.itcast.order.clients;
+package xyx.xiaoxiaoyi.feignapi.clients;
 
-import cn.itcast.order.config.DefaultFeignConfiguration;
-import cn.itcast.order.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import xyx.xiaoxiaoyi.feignapi.config.DefaultFeignConfiguration;
+import xyx.xiaoxiaoyi.feignapi.pojo.User;
 
 /**
  * @author xiaoxiaoyi
