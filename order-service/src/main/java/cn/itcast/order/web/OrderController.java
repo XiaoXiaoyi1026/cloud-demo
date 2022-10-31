@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author xiaoxiaoyi
+ * 订单请求控制
+ */
 @RestController
 @RequestMapping("order")
 public class OrderController {

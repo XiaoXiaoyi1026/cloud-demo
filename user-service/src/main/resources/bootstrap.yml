@@ -12,3 +12,9 @@ spring:
       config:
         # 配置文件后缀名
         file-extension: yaml
+        # 配置组
+        group: public
+# 设置nacos的日志输出级别
+logging:
+  level:
+    com.alibaba.nacos: warn

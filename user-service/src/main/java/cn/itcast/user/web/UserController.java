@@ -12,17 +12,21 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * @author xiaoxiaoyi
+ * 用户请求控制类
+ * {@code @RefreshScope} 注解可用于和@Value配合实现配置热加载
+ */
 @Slf4j
 @RestController
 @RequestMapping("/user")
-//@RefreshScope
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-//    @Value("${pattern.dateformat}")
-//    private String dateFormat;
+    /*@Value("${pattern.dateformat}")
+    private String dateFormat;*/
 
     @Autowired
     private PatternProperties patternProperties;

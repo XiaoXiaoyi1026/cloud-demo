@@ -13,10 +13,13 @@ spring:
       server-addr: localhost:81
       discovery:
         # 集群名称 CD代指成都
-#        cluster-name: CD
-#        namespace: 8d640f60-91a6-4bc7-8873-44a8a95a6e58
+        #        cluster-name: CD
+        #        namespace: 8d640f60-91a6-4bc7-8873-44a8a95a6e58
         # 配置实例为临时true/非临时false
         ephemeral: true
+    loadbalancer:
+      cache:
+        enabled: true
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -32,18 +35,18 @@ logging:
 #    service-url:
 #      defaultZone: http://localhost:2333/eureka
 # 要做配置的微服务名称
-userservice:
-  ribbon:
-    # 配置eureka的ribbon的负载均衡load balance规则
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-    # 配置nacos的负载均衡规则
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
-ribbon:
-  eager-load:
-    # 开启饥饿加载
-    enabled: true
-    # 指定对哪个服务
-    clients: userservice
+#userservice:
+#  ribbon:
+#    # 配置eureka的ribbon的负载均衡load balance规则
+##    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#    # 配置nacos的负载均衡规则
+#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+#ribbon:
+#  eager-load:
+#    # 开启ribbon饥饿加载，源码对应属性配置类：RibbonEagerLoadProperties
+#    enabled: true
+#    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
+#    clients: userservice
 feign:
   httpclient:
     # 支持HttpClient连接池
@@ -54,10 +57,12 @@ feign:
     max-connections: 200
     # 单个路径的最大连接数
     max-connections-per-route: 50
-#  client:
-#    config:
-#      # 可指定服务名称，default代表全局生效
-#      default:
-#        # feign日志输出级别设置 FULL代表全部日志信息
-#        loggerLevel: FULL
+  #  client:
+  #    config:
+  #      # 可指定服务名称，default代表全局生效
+  #      default:
+  #        # feign日志输出级别设置 FULL代表全部日志信息
+  #        loggerLevel: FULL
   # 配置feign的默认连接工具为Apache HttpClient
+  oauth2:
+    load-balanced: true

@@ -30,6 +30,5 @@ logging:
 #  client:
 #    service-url:
 #      defaultZone: http://localhost:2333/eureka
-
 pattern:
   name: 本地环境local
