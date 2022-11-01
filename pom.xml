@@ -77,10 +77,5 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
         </dependency>
-        <!-- 让Spring启动时读取bootstrap文件 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
     </dependencies>
 </project>
