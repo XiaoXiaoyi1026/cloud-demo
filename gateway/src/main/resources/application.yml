@@ -10,13 +10,23 @@ spring:
       routes:
           # 路由路标, 必须唯一
         - id: user-service
-          # 路由的目标地址
+          # 路由的目标地址, 支持lb和http两种
           uri: lb://userservice
           # 路由断言, 判断请求路径是否该为我管
           predicates:
             # 路径断言, 判断请求路径是否满足以/user/开头
             - Path=/user/**
+#          filters:
+#            - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
         - id: order-service
           uri: lb://orderservice
+          # 断言规则间是与的关系
           predicates:
             - Path=/order/**
+            # 限制用户的最早可访问时间
+            # - After=2031-01-20T17:42:47.789-07:00[America/Denver]
+            # 限制用户的最后可访问时间
+            - Before=2031-01-20T17:42:47.789-07:00[America/Denver]
+      # 全局过滤器, 对每一个路由都生效
+      default-filters:
+        - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
