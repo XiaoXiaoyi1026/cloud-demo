@@ -7,8 +7,24 @@ spring:
     nacos:
       server-addr: localhost:81
     gateway:
+      globalcors: # 全局的跨域处理
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: # 允许哪些网站的跨域请求
+              - "http://localhost:5500"
+              - "https://www.leyou.com"
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带的头信息
+            allowCredentials: true # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期, 单位秒
       routes:
-          # 路由路标, 必须唯一
+        # 路由路标, 必须唯一
         - id: user-service
           # 路由的目标地址, 支持lb和http两种
           uri: lb://userservice
@@ -16,8 +32,8 @@ spring:
           predicates:
             # 路径断言, 判断请求路径是否满足以/user/开头
             - Path=/user/**
-#          filters:
-#            - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
+        #          filters:
+        #            - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
         - id: order-service
           uri: lb://orderservice
           # 断言规则间是与的关系
