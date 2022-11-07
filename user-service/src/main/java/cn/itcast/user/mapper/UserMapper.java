@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 用户Mapper
  */
 @Mapper

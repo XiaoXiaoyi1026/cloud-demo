@@ -3,7 +3,7 @@ package cn.itcast.user.pojo;
 import lombok.Data;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 用户
  */
 @Data

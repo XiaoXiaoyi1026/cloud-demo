@@ -27,7 +27,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>eureka-server</finalName>
-    </build>
 </project>

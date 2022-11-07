@@ -5,7 +5,9 @@ spring:
     name: gateway
   cloud:
     nacos:
-      server-addr: localhost:81
+#      server-addr: localhost:81
+      # 使用docker-compose部署集群, 可以使用容器名称进行服务访问
+      server-addr: nacos:8848
     gateway:
       globalcors: # 全局的跨域处理
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
@@ -33,7 +35,7 @@ spring:
             # 路径断言, 判断请求路径是否满足以/user/开头
             - Path=/user/**
         #          filters:
-        #            - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
+        #            - AddRequestHeader=Truth, itcast is freaking awesome!
         - id: order-service
           uri: lb://orderservice
           # 断言规则间是与的关系

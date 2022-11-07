@@ -4,12 +4,11 @@ import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import xyx.xiaoxiaoyi.feignapi.clients.UserClient;
-import xyx.xiaoxiaoyi.feignapi.pojo.User;
+import cn.itcast.feignapi.clients.UserClient;
+import cn.itcast.feignapi.pojo.User;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 订单Service
  */
 @Service

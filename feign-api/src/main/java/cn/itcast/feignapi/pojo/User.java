@@ -1,9 +1,9 @@
-package xyx.xiaoxiaoyi.feignapi.pojo;
+package cn.itcast.feignapi.pojo;
 
 import lombok.Data;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 用户
  */
 @Data

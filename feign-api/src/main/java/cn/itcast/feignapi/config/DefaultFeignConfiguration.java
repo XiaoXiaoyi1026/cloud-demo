@@ -1,10 +1,10 @@
-package xyx.xiaoxiaoyi.feignapi.config;
+package cn.itcast.feignapi.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 默认Feign配置类
  */
 public class DefaultFeignConfiguration {

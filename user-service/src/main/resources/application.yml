@@ -5,9 +5,11 @@ spring:
     #    服务名称
     name: userservice
   datasource:
-    url: jdbc:mysql://localhost:3306/day01_springcloud01?useSSL=false
+#    url: jdbc:mysql://localhost:3306/day01_springcloud01?useSSL=false
+    # 使用docker-compose部署集群, 可以使用容器名称进行服务访问
+    url: jdbc:mysql://mysql:3306/cloud_user?useSSL=false
     username: root
-    password: 1026
+    password: 123
     driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:

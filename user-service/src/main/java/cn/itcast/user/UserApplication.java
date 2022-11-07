@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.mybatis.spring.annotation.MapperScan;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 用户服务
  */
 @MapperScan("cn.itcast.user.mapper")

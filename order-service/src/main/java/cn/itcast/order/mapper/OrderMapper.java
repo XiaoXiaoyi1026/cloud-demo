@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 订单Mapper
  */
 @Mapper

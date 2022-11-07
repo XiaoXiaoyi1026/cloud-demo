@@ -1,16 +1,16 @@
-package xyx.xiaoxiaoyi.gateway;
+package cn.itcast;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  */
 @SpringBootApplication
-public class GatewayApplication {
+public class FeignApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(FeignApplication.class);
     }
 
 }

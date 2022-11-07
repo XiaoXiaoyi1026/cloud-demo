@@ -1,13 +1,13 @@
-package xyx.xiaoxiaoyi.feignapi.clients;
+package cn.itcast.feignapi.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import xyx.xiaoxiaoyi.feignapi.config.DefaultFeignConfiguration;
-import xyx.xiaoxiaoyi.feignapi.pojo.User;
+import cn.itcast.feignapi.config.DefaultFeignConfiguration;
+import cn.itcast.feignapi.pojo.User;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * Feign发起http请求
  */
 @FeignClient(value = "userservice", configuration = DefaultFeignConfiguration.class)

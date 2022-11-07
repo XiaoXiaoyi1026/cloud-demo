@@ -1,10 +1,10 @@
 package cn.itcast.order.pojo;
 
 import lombok.Data;
-import xyx.xiaoxiaoyi.feignapi.pojo.User;
+import cn.itcast.feignapi.pojo.User;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 订单数据
  */
 @Data

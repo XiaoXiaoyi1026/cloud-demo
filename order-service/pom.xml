@@ -13,6 +13,14 @@
     <artifactId>order-service</artifactId>
 
     <dependencies>
+
+        <!-- 引用feign-api -->
+        <dependency>
+            <groupId>cn.itcast</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- 引入负载均衡 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -29,13 +37,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-        </dependency>
-
-        <!-- 引用feign-api -->
-        <dependency>
-            <groupId>xyx.xiaoxiaoyi</groupId>
-            <artifactId>feign-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- Apache HttpClient的依赖 Feign默认使用URLConnection, 不支持连接池，性能较差, 还有OKHttp, 也支持连接池 -->
@@ -79,10 +80,20 @@
         </dependency>-->
     </dependencies>
     <build>
+        <finalName>app</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.5</version>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>

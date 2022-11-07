@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 订单请求控制
  */
 @RestController

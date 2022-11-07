@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 读取nacos上的配置文件信息
  */
 @Data

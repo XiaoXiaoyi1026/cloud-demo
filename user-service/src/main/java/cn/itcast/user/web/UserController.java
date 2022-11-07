@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author xiaoxiaoyi
+ * @author itcast
  * 用户请求控制类
  * {@code @RefreshScope} 注解可用于和@Value配合实现配置热加载
  */
