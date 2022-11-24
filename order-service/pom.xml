@@ -14,6 +14,12 @@
 
     <dependencies>
 
+        <!--sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
         <!-- 引用feign-api -->
         <dependency>
             <groupId>cn.itcast</groupId>

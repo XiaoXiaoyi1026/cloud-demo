@@ -2,22 +2,23 @@ spring:
   application:
     # 服务名称
     name: userservice
-  profiles:
-    # 当前实例对应的配置文件环境名称，配置文件由服务名称-环境名称.后缀名组成
-    active: dev
+#  profiles:
+#    # 当前实例对应的配置文件环境名称，配置文件由服务名称-环境名称.后缀名组成
+#    active: dev
   cloud:
     nacos:
+      server-addr: localhost:8848
       # nacos服务地址, 用于在spring容器加载之前读取nacos上的配置信息
 #      server-addr: localhost:81
       # docker-compose部署可以使用服务名称访问
-      server-addr: nacos:8848
-      config:
-        # 配置文件后缀名
-        file-extension: yaml
-        # 配置组
-        group: DEFAULT_GROUP
-        # 命名空间
-        namespace: public
+#      server-addr: nacos:8848
+#      config:
+#        # 配置文件后缀名
+#        file-extension: yaml
+#        # 配置组
+#        group: DEFAULT_GROUP
+#        # 命名空间
+#        namespace: public
 # 设置nacos的日志输出级别
 logging:
   level:
