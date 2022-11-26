@@ -50,3 +50,5 @@ spring:
       # 全局过滤器, 对每一个路由都生效
       default-filters:
         - AddRequestHeader=Truth, xiaoxiaoyi is freaking awesome!
+        # 请求头添加键值对 origin=gateway
+        - AddRequestHeader=origin, gateway
