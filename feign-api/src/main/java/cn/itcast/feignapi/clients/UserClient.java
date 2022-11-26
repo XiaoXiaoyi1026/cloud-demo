@@ -1,5 +1,6 @@
 package cn.itcast.feignapi.clients;
 
+import cn.itcast.feignapi.clients.fallback.UserClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +11,7 @@ import cn.itcast.feignapi.pojo.User;
  * @author itcast
  * Feign发起http请求
  */
-@FeignClient(value = "userservice", configuration = DefaultFeignConfiguration.class)
+@FeignClient(value = "userservice", configuration = DefaultFeignConfiguration.class, fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
 
     /**

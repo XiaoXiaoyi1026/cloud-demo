@@ -31,6 +31,8 @@ spring:
       transport:
         # sentinel控制台地址
         dashboard: localhost:8080
+      # 关闭context整合(避免Controller中的所有根链路被看成一个)
+      web-context-unify: false
     loadbalancer:
       cache:
         enabled: true
@@ -80,3 +82,6 @@ feign:
   # 配置feign的默认连接工具为Apache HttpClient
   oauth2:
     load-balanced: true
+  sentinel:
+    # 开启feign对sentinel的支持
+    enabled: true
